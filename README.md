@@ -1,3 +1,5 @@
+
+```markdown
 <div align="center">
 
 # AD Help Desk CLI Tool
@@ -54,5 +56,115 @@ Ensure you have the following before starting:
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/lior3333/ad-helpdesk-cli.git](https://github.com/lior3333/ad-helpdesk-cli.git)
+git clone [https://github.com/lior3333/ad-helpdesk-cli.git]
 cd ad-helpdesk-cli
+
+```
+
+**2. Create an isolated virtual environment:**
+
+```bash
+python -m venv .venv
+
+```
+
+**3. Activate the virtual environment:**
+
+* **Windows:**
+```cmd
+.venv\Scripts\activate
+
+```
+
+
+* **Mac/Linux:**
+```bash
+source .venv/bin/activate
+
+```
+
+
+
+**4. Install dependencies:**
+
+```bash
+pip install -r requirements.txt
+
+```
+
+---
+
+## Configuration
+
+> [!WARNING]
+> **Critical Security Notice:** This project uses environment variables to protect sysadmin credentials. Never commit passwords or `.env` files to version control. Ensure `.env` is listed in your `.gitignore`.
+
+Create a file named `.env` in the root directory of the project and populate it with your environment details:
+
+```env
+# Active Directory Server Settings
+AD_SERVER=192.168.1.100
+AD_SEARCH_BASE=DC=company,DC=com
+
+# Sysadmin Credentials (Read permissions required)
+AD_USER=DOMAIN\AdminUser
+AD_PASSWORD=YourSecretPassword
+
+```
+
+---
+
+## Usage
+
+Run the script by passing the employee's name (or a keyword from their name) as a command-line argument. The tool supports partial and full names.
+
+**Basic Syntax:**
+
+```bash
+python main.py <Employee_Name>
+
+```
+
+**Examples:**
+
+```bash
+python main.py John
+python main.py Jane Doe
+
+```
+
+### Output Example
+
+Upon execution, the script performs the following workflow:
+
+1. **Locate & Display:** Fetches the user and displays details in a structured panel (Name, Username, Department, Phone, Email).
+2. **Endpoint Discovery:** Scans AD for all computer objects associated with the user.
+3. **Live Diagnostics:** Prints a real-time table showing the OS version, resolved IP address, and availability status (`[ONLINE]` / `[OFFLINE]`).
+
+---
+
+## Dependencies
+
+This project relies on the following open-source libraries:
+
+| Library | Description |
+| --- | --- |
+| [`ldap3`](https://ldap3.readthedocs.io/) | Pure Python strictly RFC 4510 conforming LDAP V3 client. |
+| [`rich`](https://rich.readthedocs.io/) | Library for rich text and beautiful formatting in the terminal. |
+| [`python-dotenv`](https://pypi.org/project/python-dotenv/) | Reads key-value pairs from a `.env` file and sets them as environment variables. |
+| [`python-bidi`](https://pypi.org/project/python-bidi/) | Pure Python implementation of the BiDi layout algorithm. |
+
+---
+
+## Contributing
+
+Contributions, issues, and feature requests are welcome!
+Feel free to check the [issues page](https://www.google.com/search?q=https://github.com/your-username/ad-helpdesk-cli/issues) if you want to contribute.
+
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+```
+
+```
