@@ -55,7 +55,7 @@ Ensure you have the following before starting:
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/lior3333/ad-helpdesk-cli.git]
+git clone https://github.com/lior3333/ad-helpdesk-cli.git
 cd ad-helpdesk-cli
 
 ```
