@@ -158,7 +158,7 @@ This project relies on the following open-source libraries:
 ## Contributing
 
 Contributions, issues, and feature requests are welcome!
-Feel free to check the [issues page](https://www.google.com/search?q=https://github.com/your-username/ad-helpdesk-cli/issues) if you want to contribute.
+Feel free to check the [issues page](https://www.google.com/search?q=https://github.com/lior3333/ad-helpdesk-cli/issues) if you want to contribute.
 
 ## License
 
