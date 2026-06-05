@@ -164,6 +164,8 @@ Feel free to check the [issues page](https://www.google.com/search?q=https://git
 
 Distributed under the MIT License. See `LICENSE` for more information.
 
-```
+---
 
-```
+<p align="center">
+  Made by <b>Lior Rez</b>
+</p>
